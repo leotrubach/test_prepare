@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="question">
+{{ question }}
+</div>
+<div class="answers">
+	{% for a in answers %}
+	<div class="answer" id="q{{ a.id }}">
+		<form method="post" action="{% url submit-answer %}">
+			{% csrf_token %}
+			<input type="hidden" name="question_id" value="{{ a.question.id }}" />
+			<input type="hidden" name="answer_id" value="{{ a.id }}" />
+			<input type="submit" class="btn btn-primary">
+		</form>
+		{{ a.text }}
+	</div>	
+	{% endfor %}
+</div>
+{% endblock %}
