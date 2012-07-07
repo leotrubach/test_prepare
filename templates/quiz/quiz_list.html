@@ -2,11 +2,11 @@
 {% load i18n %}
 
 {% block content %}
-	{% if object_list %}
 	<div class="page-header">
 		<a class="btn pull-right" href="{% url upload-quiz %}">{% trans "Upload quiz" %}</a>
 		<h1>{% trans "Please select quiz category" %}</h1>	
 	</div>
+	{% if object_list %}
 		<table class="table">
 		{% for o in object_list %}
 			<tr>
