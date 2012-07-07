@@ -1,0 +1,17 @@
+.hidden {
+	display: none;
+}
+
+.question-text {
+	margin-bottom: 1em
+}
+
+.answer-text {
+	display: block;
+	clear: none;
+}
+
+.answer-button {
+	display: inline-block;
+	clear: none;
+}

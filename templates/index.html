@@ -2,8 +2,12 @@
 {% load i18n %}
 
 {% block content %}
-<div class="container">
-	<h1>{% trans "Welcome to test trainer" %}</h1>
-	<a href="{% url quiz-list %}">{% trans "Start training" %}</a>
-</div>
+	<div class="page-header">
+		<h1>{% trans "Welcome to test trainer" %}</h1>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<a href="{% url quiz-list %}">{% trans "Start training" %}</a>
+		</div>
+	</div>
 {% endblock %}

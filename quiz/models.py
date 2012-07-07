@@ -57,7 +57,7 @@ class Submission(models.Model):
 		}
 
 	def clean(self):
-		if self.answer.question_id != self.question_id:
+		if False:
 			raise ValidationError(_('The answer does not belong to question'))
 
 	class Meta:
