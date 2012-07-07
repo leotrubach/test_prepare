@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TestPrepare\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-07 02:56+0600\n"
+"PO-Revision-Date: 2012-07-07 03:01+0600\n"
+"Last-Translator: Leo Trubach <leotrubach@gmail.com>\n"
+"Language-Team: Leo Trubach <leotrubach@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Poedit-Language: Russian\n"
+
+#: .\quiz\forms.py:11
+#: .\quiz\models.py:25
+#: .\quiz\models.py:31
+#: .\quiz\models.py:49
+msgid "question"
+msgstr "вопрос"
+
+#: .\quiz\forms.py:14
+#: .\quiz\models.py:50
+msgid "answer given"
+msgstr "данный ответ"
+
+#: .\quiz\forms.py:21
+msgid "Answer does not belong to question"
+msgstr "Ответ не принадлежит вопросу"
+
+#: .\quiz\models.py:10
+#, python-format
+msgid "QUIZ: %s"
+msgstr "ТЕСТ: %s"
+
+#: .\quiz\models.py:13
+#: .\quiz\models.py:19
+msgid "quiz"
+msgstr "тест"
+
+#: .\quiz\models.py:14
+msgid "quizes"
+msgstr "тесты"
+
+#: .\quiz\models.py:18
+#: .\quiz\models.py:30
+msgid "text"
+msgstr "текст"
+
+#: .\quiz\models.py:22
+#, python-format
+msgid "QUESTION: %s"
+msgstr "ВОПРОС: %s"
+
+#: .\quiz\models.py:26
+msgid "questions"
+msgstr "вопросы"
+
+#: .\quiz\models.py:32
+msgid "is correct"
+msgstr "верный"
+
+#: .\quiz\models.py:36
+#, python-format
+msgid "ANSWER: %s (correct)"
+msgstr "ОТВЕТ: %s (верный)"
+
+#: .\quiz\models.py:38
+#, python-format
+msgid "ANSWER: %s (incorrect)"
+msgstr "ОТВЕТ: %s (неверный)"
+
+#: .\quiz\models.py:41
+msgid "answer"
+msgstr "ответ"
+
+#: .\quiz\models.py:42
+msgid "answers"
+msgstr "ответы"
+
+#: .\quiz\models.py:53
+#, python-format
+msgid "%(submitted)s -%(question)s -%(answer)s"
+msgstr "%(submitted)s -%(question)s -%(answer)s"
+
+#: .\quiz\models.py:61
+msgid "The answer does not belong to question"
+msgstr "Ответ не принадлежит вопросу"
+
+#: .\quiz\models.py:64
+msgid "submission"
+msgstr "данный ответ"
+
+#: .\quiz\models.py:65
+msgid "submissions"
+msgstr "данные ответы"
+
+#: .\templates\index.html.py:6
+msgid "Welcome to test trainer"
+msgstr "Добро пожаловать в тренер по тестам"
+
+#: .\templates\index.html.py:10
+msgid "Start training"
+msgstr "Начать тестирование"
+
+#: .\templates\quiz\quiz_detail.html.py:33
+msgid "Next"
+msgstr "Далее"
+
+#: .\templates\quiz\quiz_list.html.py:7
+msgid "Upload quiz"
+msgstr "Загрузить тест"
+
+#: .\templates\quiz\quiz_list.html.py:8
+msgid "Please select quiz category"
+msgstr "Пожалуйста, выберите категорию теста"
+
+#: .\templates\quiz\upload_quiz.html.py:6
+msgid "Upload quiz file"
+msgstr "Загрузить тест"
+
+#: .\templates\quiz\upload_quiz.html.py:26
+msgid "Upload"
+msgstr "Загрузить"
+

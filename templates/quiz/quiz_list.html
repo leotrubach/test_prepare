@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+	{% if object_list %}
+	<div class="page-header">
+		<a class="btn pull-right" href="{% url upload-quiz %}">{% trans "Upload quiz" %}</a>
+		<h1>{% trans "Please select quiz category" %}</h1>	
+	</div>
+		<table class="table">
+		{% for o in object_list %}
+			<tr>
+			<td><a href="{% url quiz-questions o.id %}"><h4>{{ o.name }}</h4></a><td>
+			</tr>
+		{% endfor %}
+		<table>
+	{% endif %}
+{% endblock %}

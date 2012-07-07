@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.2.min.js"></script>
+		<link href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="{{ STATIC_URL }}css/quiz.css" rel="stylesheet"/>
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<div class="container">{% block content %}{% endblock %}</div>
+	</body>
+</html>

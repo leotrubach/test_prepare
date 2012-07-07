@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="question">
+	<div class="page-header"><h1>{{ question.quiz.name }}</h1></div>
+	<div class="row question-text">
+		<div class="span12"><h2>{{ question.text }}</h2></div>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<div class="answers">
+				{% for a in answers %}
+				<div class="answer" id="q{{ a.id }}">
+					<form method="post" 
+						  class="answer well form-inline" 
+						  action="{% url submit-answer %}">
+						{% csrf_token %}
+						<input type="hidden" name="question" value="{{ a.question.id }}" />
+						<input type="hidden" name="answer" value="{{ a.id }}" />
+						
+								<input type="submit" class="btn btn-primary answer-button" id="a{{ a.id }}" value="" />
+								<span>{{ a.text }}</span>
+
+					</form>
+				</div>	
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="row hidden" id="next-question">
+		<div class="span12 controls	">
+			<a href="" class="btn btn-large btn-primary	 pull-right" id="next_question">{% trans "Next" %}</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{{ STATIC_URL }}jquery.form.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}ajaxify_answers.js"></script>
+{% endblock %}
