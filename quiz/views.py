@@ -56,8 +56,9 @@ class UploadQuizView(FormView):
 	template_name = 'quiz/upload_quiz.html'
 
 	def form_valid(self, form):
-		questions = parse(form.cleaned_data.get('quiz'))
-		print questions
+		questions = parse(
+			form.cleaned_data.get('quiz'),
+			form.cleaned_data.get('encoding'))
 		quiz = Quiz(name=form.cleaned_data.get('title'))
 		quiz.save()
 		for q in questions:

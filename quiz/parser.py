@@ -2,12 +2,12 @@ from tempfile import NamedTemporaryFile
 import codecs
 
 
-def parse(f):
+def parse(f, encoding='utf_8_sig'):
 	tf = NamedTemporaryFile(delete=False)
 	for c in f.chunks():
 		tf.write(c)
 	tf.close()
-	t = codecs.open(tf.name, 'r', encoding='utf_8_sig')
+	t = codecs.open(tf.name, 'r', encoding)
 	questions = []
 	mode = 'question'
 	newmode = ''
@@ -35,4 +35,6 @@ def parse(f):
 			else:
 				newmode = 'answers'
 		mode = newmode
+	if q:
+		questions.append(q.copy())
 	return questions

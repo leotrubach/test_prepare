@@ -21,6 +21,12 @@ class SubmitForm(forms.Form):
 			raise ValidationError(_('Answer does not belong to question'))
 		return cleaned_data
 
+encodings = (
+	('utf_8_sig', 'UTF-8 sig'),
+	('cp1251', 'cp1251')
+)
+
 class LoadQuizForm(forms.Form):
 	title = forms.CharField(max_length=50)
+	encoding = forms.ChoiceField(choices=encodings)
 	quiz = forms.FileField()
